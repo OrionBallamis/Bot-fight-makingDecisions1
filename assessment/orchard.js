@@ -89,10 +89,10 @@ for (let i = 0; i < totalOrchardsArces; i++) {
     console.log(`${dayOfWeek[i]}: ${totalAcres}`);
 }
 
-let endOfWeekArceTotal = endOfWeekTotal[0] + endOfWeekTotal[1] + endOfWeekTotal[2] + endOfWeekTotal[3] + endOfWeekTotal[4] + endOfWeekTotal[5] + endOfWeekTotal[6]
+let endOfWeekAcreTotal = endOfWeekTotal[0] + endOfWeekTotal[1] + endOfWeekTotal[2] + endOfWeekTotal[3] + endOfWeekTotal[4] + endOfWeekTotal[5] + endOfWeekTotal[6]
 
 console.log(`----------`)
-console.log(`Total Arces at the end of week: ${endOfWeekArceTotal}`)
+console.log(`Total Acres at the end of week: ${endOfWeekAcreTotal}`)
 console.log(`============`);
 
 
@@ -125,7 +125,7 @@ for(let i = 0; i < totalOrchardsArces; i++ ) {
 let WeekAverageTotal = (WeekArceAverageTotal[0] + WeekArceAverageTotal[1] + WeekArceAverageTotal[2] + WeekArceAverageTotal[3] + WeekArceAverageTotal[4] + WeekArceAverageTotal[5] + WeekArceAverageTotal[6]) / 3
 
 console.log(`----------`)
-console.log(`Total Average arces at the end of week: ${WeekAverageTotal}`)
+console.log(`Total Average acres at the end of week: ${WeekAverageTotal}`)
 console.log(`============`);
 
 
@@ -163,15 +163,15 @@ let acresLeft = 174
 let days = 0
 
 // CODE HERE
+
 while(acresLeft > 0) {
     
-        acresLeft =- averageDailyAcres
-        days++
-        console.log(`day:${days} - ${acresLeft} left`)
-    
+    acresLeft -= averageDailyAcres
+    days++
+    console.log(`day:${days} - ${acresLeft} left`)
+
 }
-
-
+console.log(`============`);
 
 
 
@@ -201,12 +201,50 @@ while(acresLeft > 0) {
 
 // CODE HERE
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
+let fujiTons = fujiAcres.slice(0,7);
+let galaTons = galaAcres.slice(0,7);
+let pinkTons = pinkAcres.slice(0,7);
+const fujiTotalTonsArr = [];
+const galaTotalTonsArr = [];
+const pinkTotalTonsArr = [];
 
 
 
+console.log(`~~ Fuji ~~`);
+
+for(let i = 0; i < fujiTons.length; i++) {
+
+    var fujiTonsAmmount = fujiTons[i] * 6.5;
+    fujiTotalTonsArr.push(fujiTonsAmmount);
+    console.log(`${dayOfWeek[i]}: ${fujiTonsAmmount} tons`);
+}
+let weeklyFujiTons = fujiTotalTonsArr[0] + fujiTotalTonsArr[1] + fujiTotalTonsArr[2] + fujiTotalTonsArr[3] + fujiTotalTonsArr[4] + fujiTotalTonsArr[5] + fujiTotalTonsArr[6];
+console.log(`----------`);
+console.log(`End of week total: ${weeklyFujiTons} tons`)
+console.log(`============`);
+console.log(`~~ Gala ~~`);
+
+for(let i = 0; i < galaTons.length; i++) {
+    var galaTonsAmmount = galaTons[i] * 6.5;
+    galaTotalTonsArr.push(galaTonsAmmount);
+    console.log(`${dayOfWeek[i]}: ${galaTonsAmmount} tons`);
+}
+let weeklyGalaTons = galaTotalTonsArr[0] + galaTotalTonsArr[1] + galaTotalTonsArr[2] + galaTotalTonsArr[2] + galaTotalTonsArr[3] + galaTotalTonsArr[4] + galaTotalTonsArr[5] + galaTotalTonsArr[6];
+console.log(`----------`);
+console.log(`End of week total: ${weeklyGalaTons} tons`);
+console.log(`============`);
+console.log(`~~ Pink ~~`);
+
+for(let i = 0; i < pinkTons.length; i++) {
+    var pinkTonsAmmount = pinkTons[i] * 6.5;
+    pinkTotalTonsArr.push(pinkTonsAmmount)
+    console.log(`${dayOfWeek[i]}: ${pinkTonsAmmount} tons`);
+}
+let weeklyPinkTons = pinkTotalTonsArr[0] + pinkTotalTonsArr[1] + pinkTotalTonsArr[2] + pinkTotalTonsArr[3] + pinkTotalTonsArr[4] + pinkTotalTonsArr[5] + pinkTotalTonsArr[6];
+console.log(`----------`);
+console.log(`End of week Totoal: ${weeklyPinkTons}`);
+
+console.log(`============`);
 
 
 
@@ -228,11 +266,54 @@ while(acresLeft > 0) {
 
 // CODE HERE 
 
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
+let fujiPounds = fujiTotalTonsArr.slice(0,7);
+let galaPounds = galaTotalTonsArr.slice(0,7);
+let pinkPounds = pinkTotalTonsArr.slice(0,7);
+const fujiTotalPoundsArr = [];
+const galaTotalPoundsArr = [];
+const pinkTotalPoundsArr = [];
 
+console.log(`~~ Fuji ~~`);
 
+for(let i = 0; i < fujiPounds.length; i++) {
+    var fujiTonsToPounds = fujiPounds[i] * 2000;
+    fujiTotalPoundsArr.push(fujiTonsToPounds);
+    console.log(`${dayOfWeek[i]}: ${fujiTonsToPounds} pounds`);
+}
+
+let fujiweeklyPounds = fujiTotalPoundsArr[0] + fujiTotalPoundsArr[1] + fujiTotalPoundsArr[2] + fujiTotalPoundsArr[3] + fujiTotalPoundsArr[4] + fujiTotalPoundsArr[5] + fujiTotalPoundsArr[6];
+console.log(`----------`);
+console.log(`End of week Totoal: ${fujiweeklyPounds} Pounds`);
+
+console.log(`============`);
+
+console.log(`~~ Gala ~~`);
+
+for(let i = 0; i < galaPounds.length; i++) {
+    var galaTonsToPounds = galaPounds[i] * 2000;
+    galaTotalPoundsArr.push(galaTonsToPounds);
+    console.log(`${dayOfWeek[i]}: ${galaTonsToPounds} pounds`);
+}
+
+let galaweeklyPounds = galaTotalPoundsArr[0] + galaTotalPoundsArr[1] + galaTotalPoundsArr[2] + galaTotalPoundsArr[3] + galaTotalPoundsArr[4] + galaTotalPoundsArr[5] + galaTotalPoundsArr[6];
+console.log(`----------`);
+console.log(`End of week Totoal: ${galaweeklyPounds} Pounds`);
+
+console.log(`============`);
+
+console.log(`~~ Pink ~~`);
+
+for(let i = 0; i < pinkPounds.length; i++) {
+    var pinkTonsToPounds = pinkPounds[i] * 2000;
+    pinkTotalPoundsArr.push(pinkTonsToPounds);
+    console.log(`${dayOfWeek[i]}: ${pinkTonsToPounds} pounds`);
+}
+
+let pinkweeklyPounds = pinkTotalPoundsArr[0] + pinkTotalPoundsArr[1] + pinkTotalPoundsArr[2] + pinkTotalPoundsArr[3] + pinkTotalPoundsArr[4] + pinkTotalPoundsArr[5] + pinkTotalPoundsArr[6];
+console.log(`----------`);
+console.log(`End of week Totoal: ${pinkweeklyPounds} Pounds`);
+
+console.log(`============`);
 
 
 
@@ -255,9 +336,52 @@ while(acresLeft > 0) {
 
 // CODE HERE
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
+let fujiProfit = fujiTotalPoundsArr.slice(0,7);
+let galaProfit = galaTotalPoundsArr.slice(0,7);
+let pinkProfit = pinkTotalPoundsArr.slice(0,7);
+const fujiProfitArr = [];
+const galaProfitArr = [];
+const pinkProfitArr = [];
+
+
+for(let i = 0; i < fujiProfit.length; i++) {
+    var fujiTotalProfit = fujiProfit[i] * fujiPrice
+    fujiProfitArr.push(fujiTotalProfit);
+    console.log(`${dayOfWeek[i]}: $${fujiTotalProfit}`)
+}
+
+let fujiWeeklyProfit = fujiProfitArr[0] + fujiProfitArr[1] + fujiProfitArr[2] + fujiProfitArr[3] + fujiProfitArr[4] + fujiProfitArr[5] + fujiProfitArr[6];
+
+console.log(`----------`);
+console.log(`End of week Totoal: $${fujiWeeklyProfit}`);
+
+console.log(`============`);
+
+for(let i = 0; i < galaProfit.length; i++) {
+    var galaTotalProfit = galaProfit[i] * fujiPrice
+    galaProfitArr.push(galaTotalProfit);
+    console.log(`${dayOfWeek[i]}: $${galaTotalProfit}`)
+}
+
+let galaWeeklyProfit = galaProfitArr[0] + galaProfitArr[1] + galaProfitArr[2] + galaProfitArr[3] + galaProfitArr[4] + galaProfitArr[5] + galaProfitArr[6];
+
+console.log(`----------`);
+console.log(`End of week Totoal: $${galaWeeklyProfit}`);
+
+console.log(`============`);
+
+for(let i = 0; i < pinkProfit.length; i++) {
+    var pinkTotalProfit = pinkProfit[i] * fujiPrice
+    pinkProfitArr.push(pinkTotalProfit);
+    console.log(`${dayOfWeek[i]}: $${pinkTotalProfit}`)
+}
+
+let pinkWeeklyProfit = pinkProfitArr[0] + pinkProfitArr[1] + pinkProfitArr[2] + pinkProfitArr[3] + pinkProfitArr[4] + pinkProfitArr[5] + pinkProfitArr[6];
+
+console.log(`----------`);
+console.log(`End of week Totoal: $${pinkWeeklyProfit}`);
+
+console.log(`============`);
 
 
 
@@ -275,3 +399,6 @@ while(acresLeft > 0) {
 */
 
 // CODE HERE
+let totalProfit = pinkWeeklyProfit + galaWeeklyProfit + fujiWeeklyProfit;
+console.log(`Total profit: $${totalProfit}`)
+console.log(`============`);
