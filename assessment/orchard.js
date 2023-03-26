@@ -343,7 +343,7 @@ const fujiProfitArr = [];
 const galaProfitArr = [];
 const pinkProfitArr = [];
 
-
+console.log(`~~ Fuji ~~`);
 for(let i = 0; i < fujiProfit.length; i++) {
     var fujiTotalProfit = fujiProfit[i] * fujiPrice
     fujiProfitArr.push(fujiTotalProfit);
@@ -356,7 +356,7 @@ console.log(`----------`);
 console.log(`End of week Totoal: $${fujiWeeklyProfit}`);
 
 console.log(`============`);
-
+console.log(`~~ Gala ~~`);
 for(let i = 0; i < galaProfit.length; i++) {
     var galaTotalProfit = galaProfit[i] * fujiPrice
     galaProfitArr.push(galaTotalProfit);
@@ -369,7 +369,7 @@ console.log(`----------`);
 console.log(`End of week Totoal: $${galaWeeklyProfit}`);
 
 console.log(`============`);
-
+console.log(`~~ Pink ~~`);
 for(let i = 0; i < pinkProfit.length; i++) {
     var pinkTotalProfit = pinkProfit[i] * fujiPrice
     pinkProfitArr.push(pinkTotalProfit);
